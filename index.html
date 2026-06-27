@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="IKS — A community where creators help creators. No money, no barriers, just infinite dreams. Join now.">
+  <meta name="author" content="Ishaan Kr. Singh">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>IKS — Jack of All Traits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== PARTICLES ========== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ========== PROGRESS BAR ========== -->
+  <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+
+  <!-- ========== CINEMATIC INTRO ========== -->
+  <div class="cinema" id="cinema">
+
+    <!-- Scene 1: Logo -->
+    <div class="scene" id="scene-0">
+      <img src="ChatGPT Image Jun 23, 2026, 10_45_34 AM.png" alt="IKS" class="scene-card-img">
+      <h1 class="scene-title">IKS</h1>
+      <p class="scene-subtitle">Jack of All Traits</p>
+    </div>
+
+    <!-- Scene 2: Dream -->
+    <div class="scene" id="scene-1">
+      <p class="scene-text">
+        Every great story begins with <em>a dream</em>...
+      </p>
+    </div>
+
+    <!-- Scene 3: The Movie -->
+    <div class="scene" id="scene-2">
+      <p class="scene-text">
+        A dream to create an <span class="gold">animated movie</span>.<br>
+        A whole universe of stories waiting to be told.
+      </p>
+    </div>
+
+    <!-- Scene 4: The Problem -->
+    <div class="scene" id="scene-3">
+      <p class="scene-text">
+        But there was one problem.
+      </p>
+    </div>
+
+    <!-- Scene 5: ₹0 -->
+    <div class="scene" id="scene-4">
+      <p class="scene-text-large">
+        ₹0 in the budget.
+      </p>
+    </div>
+
+    <!-- Scene 6: The Pivot -->
+    <div class="scene" id="scene-5">
+      <p class="scene-text">
+        The animated movie became a <span class="gold">book</span>.<br>
+        The big team became a <em>solo journey</em>.
+      </p>
+    </div>
+
+    <!-- Scene 7: But... -->
+    <div class="scene" id="scene-6">
+      <p class="scene-text">
+        But the dream?<br><br>
+        <span class="gold">The dream never died.</span>
+      </p>
+    </div>
+
+    <!-- Scene 8: The Idea -->
+    <div class="scene" id="scene-7">
+      <p class="scene-text">
+        What if <span class="gold">creators</span> came together?<br>
+        Not for money. Not for clout.<br>
+        But for the pure joy of building something <em>together</em>.
+      </p>
+    </div>
+
+    <!-- Scene 9: IKS Born -->
+    <div class="scene" id="scene-8">
+      <p class="scene-text-large">
+        And so, IKS was born.
+      </p>
+      <div class="scene-divider">
+        <span class="line"></span>
+        <span class="diamond"></span>
+        <span class="line"></span>
+      </div>
+      <p class="scene-subtitle" style="margin-top: 4px;">A Place Where Creators Help Creators</p>
+    </div>
+
+    <!-- Scene 10: What is IKS -->
+    <div class="scene" id="scene-9">
+      <p class="scene-text">
+        <span class="gold">IKS</span> is a community where your skills are your currency,<br>
+        your passion is your investment,<br>
+        and your dreams are <em>never too big to chase</em>.
+      </p>
+    </div>
+
+    <!-- Scene 11: Who -->
+    <div class="scene" id="scene-10">
+      <p class="scene-text">
+        Writers. Artists. Animators. Musicians.<br>
+        Developers. Editors. Dreamers.<br><br>
+        <span class="gold">Everyone has a place here.</span>
+      </p>
+    </div>
+
+    <!-- Scene 12: Quote -->
+    <div class="scene" id="scene-11">
+      <p class="scene-text" style="font-style: italic;">
+        "Great dreams should not fail<br>
+        because of a lack of money,<br>
+        resources, or connections."
+      </p>
+      <div class="scene-divider">
+        <span class="line"></span>
+        <span class="diamond"></span>
+        <span class="line"></span>
+      </div>
+      <p class="scene-subtitle" style="margin-top: 8px; letter-spacing: 0.3em;">— Ishaan Kr. Singh, Founder</p>
+    </div>
+
+    <!-- Scene 13: Motto -->
+    <div class="scene" id="scene-12">
+      <img src="ChatGPT Image Jun 23, 2026, 10_45_44 AM.png" alt="0 Rupees. Infinite Dreams." class="scene-motto-img">
+    </div>
+
+  </div>
+
+  <!-- Tap hint -->
+  <div class="tap-hint" id="tapHint">Tap or press any key to continue</div>
+
+  <!-- Skip -->
+  <button class="skip-btn" id="skipBtn">Skip Intro</button>
+
+  <!-- ========== RULES PHASE ========== -->
+  <div class="rules-phase" id="rulesPhase">
+
+    <!-- Rules Intro Screen -->
+    <div class="rules-intro" id="rulesIntro" style="display: none;">
+      <span class="rules-intro-label">Before You Join</span>
+      <h2 class="rules-intro-title">Community Rules</h2>
+      <p class="rules-intro-text">
+        To join IKS, you must accept our community rules.<br>
+        <span class="warn">Read each rule carefully.</span>
+      </p>
+      <button class="accept-btn" id="startRulesBtn">
+        I'm Ready
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Rule Display -->
+    <div class="rule-display" id="ruleDisplay" style="display: none;">
+      <div class="rule-card" id="ruleCard">
+        <span class="rule-counter" id="ruleCounter"></span>
+        <div class="rule-number-badge" id="ruleNumberBadge"></div>
+        <h3 class="rule-card-title" id="ruleTitle"></h3>
+        <p class="rule-card-body" id="ruleBody"></p>
+        <button class="accept-btn" id="acceptRuleBtn">
+          I Accept
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+      <div class="rule-progress" id="ruleProgress"></div>
+    </div>
+
+  </div>
+
+  <!-- ========== JOIN PHASE ========== -->
+  <div class="join-phase" id="joinPhase">
+    <img src="ChatGPT Image Jun 23, 2026, 10_45_51 AM.png" alt="IKS" class="join-card-img">
+    <p class="join-congrats">All Rules Accepted</p>
+    <h2 class="join-title">Welcome to the Family</h2>
+    <p class="join-text">
+      You've read and accepted every rule. You're ready to be a part of something incredible.
+    </p>
+    <a href="https://forms.gle/h64crp6xzGxcZH3dA" class="join-btn" id="joinBtn">
+      Join IKS
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <p class="join-motto">
+      <span class="gold">"0 Rupees. Infinite Dreams."</span>
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
