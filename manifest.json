@@ -1,0 +1,21 @@
+{
+  "name": "IKS - Jack of All Traits",
+  "short_name": "IKS",
+  "description": "A community where creators help creators. No money, no barriers, just infinite dreams.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "./icons/icon-192.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "./icons/icon-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
