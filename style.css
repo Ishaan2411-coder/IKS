@@ -1,0 +1,453 @@
+/* ========================================================
+   IKS — EXACT PDF & RULES REPLICA STYLING
+   Pitch Black (#000000), Signature Red & Golden Borders
+   ======================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+  color: #dfcf99;
+}
+
+body {
+  background-color: #000000;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #dfcf99;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================================
+   FLOATING SLIDE NAVIGATION DOTS
+   ======================================================== */
+.slide-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 100;
+}
+
+.slide-nav .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid #d4af37;
+  background: transparent;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.slide-nav .dot.active,
+.slide-nav .dot:hover {
+  background: #d4af37;
+  box-shadow: 0 0 10px #d4af37;
+  transform: scale(1.3);
+}
+
+/* ========================================================
+   PAGE GENERAL LAYOUT (16:9 Slide Feel)
+   ======================================================== */
+.pdf-page {
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Red Titles matching PDF */
+.pdf-red-title {
+  color: #cb252d;
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* ========================================================
+   PAGE 1 (PDF PAGE 1 - HERO SLIDE)
+   ======================================================== */
+.page-1 {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+}
+
+.page-1-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 720px;
+  width: 100%;
+}
+
+.logo-box {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.iks-pdf-logo {
+  max-width: 90%;
+  width: 580px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.9));
+}
+
+.pdf-btn-red {
+  display: inline-block;
+  color: #cb252d;
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.pdf-btn-red:hover {
+  color: #ff3b44;
+  transform: translateY(2px);
+  text-shadow: 0 0 12px rgba(203, 37, 45, 0.6);
+}
+
+/* ========================================================
+   PAGE 2 (PDF PAGE 2 - WHAT IS IKS?)
+   Exact match to the rounded golden frame on slide 2
+   ======================================================== */
+.page-2 {
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+}
+
+.pdf-gold-card {
+  width: 100%;
+  max-width: 920px;
+  background-color: #000000;
+  border: 2px solid #e0aa48;
+  border-radius: 24px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: 0 0 20px rgba(224, 170, 72, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-2 .pdf-red-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  margin-bottom: 1.8rem;
+}
+
+.pdf-card-text {
+  width: 100%;
+  color: #dfcf99;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.7;
+  font-weight: 600;
+  text-align: left;
+}
+
+.pdf-card-text p {
+  margin-bottom: 1.3rem;
+}
+
+.pdf-card-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Exact red highlights with underline from page 2 */
+.pdf-red-underline {
+  color: #cb252d;
+  text-decoration: underline;
+  text-decoration-color: #cb252d;
+  text-underline-offset: 3px;
+  font-weight: 700;
+}
+
+.page-2-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-goto-rules {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #cb252d;
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-goto-rules:hover {
+  color: #ff3b44;
+  transform: translateY(3px);
+}
+
+/* ========================================================
+   PAGE 3 (PDF PAGE 3 - RULES EXACT REPLICA)
+   Exact match to the 11 cards from uploaded image
+   ======================================================== */
+.page-3 {
+  min-height: 100vh;
+  padding: 4.5rem 1.5rem 5rem;
+  align-items: flex-start;
+}
+
+.page-3-inner {
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.rules-main-title {
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  margin-bottom: 2.2rem;
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.8rem;
+}
+
+/* Individual Rule Box matching uploaded image */
+.rule-box {
+  background-color: #121214;
+  border: 1px solid #7e6327;
+  border-radius: 9px;
+  padding: 1.1rem 1.4rem;
+  transition: all 0.25s ease;
+}
+
+.rule-box:hover {
+  border-color: #bfa14f;
+  background-color: #161619;
+}
+
+.rule-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.rule-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid #d4af37;
+  background: #000000;
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  flex-shrink: 0;
+}
+
+.rule-title {
+  font-family: 'Cinzel', serif;
+  color: #e5ad43;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.rule-body {
+  color: #bfbfbf;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  font-weight: 500;
+  padding-left: 2.1rem;
+}
+
+/* ========================================================
+   JOIN & ACCEPTANCE SECTION
+   ======================================================== */
+.join-section {
+  background-color: #121214;
+  border: 1.5px solid #d4af37;
+  border-radius: 12px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.12);
+  transition: all 0.3s ease;
+}
+
+.join-section.accepted {
+  border-color: #f7d58b;
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.25);
+}
+
+.accept-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.95rem;
+  color: #dfcf99;
+  font-weight: 600;
+}
+
+.accept-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid #d4af37;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.checkbox-box .checkmark {
+  font-size: 0.8rem;
+  color: #000;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 0.2s ease;
+}
+
+.accept-label input[type="checkbox"]:checked + .checkbox-box {
+  background: #d4af37;
+}
+
+.accept-label input[type="checkbox"]:checked + .checkbox-box .checkmark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Join Button */
+.join-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem 3rem;
+  border-radius: 8px;
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #e0aa48, #f7d58b, #c6922e);
+  color: #000000;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(224, 170, 72, 0.5);
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  box-shadow: 0 0 35px rgba(224, 170, 72, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Disabled Join Button */
+.join-btn.disabled {
+  background: #252528;
+  color: #71717a;
+  box-shadow: none;
+  cursor: not-allowed;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.join-btn.disabled:hover {
+  transform: none;
+}
+
+.lock-hint {
+  font-size: 0.85rem;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.lock-hint.unlocked {
+  color: #22c55e;
+}
+
+/* Attention shake animation */
+@keyframes shakeBox {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.shake {
+  animation: shakeBox 0.45s ease-in-out;
+}
+
+/* ========================================================
+   RESPONSIVENESS
+   ======================================================== */
+@media (max-width: 768px) {
+  .slide-nav {
+    display: none;
+  }
+
+  .pdf-gold-card {
+    padding: 1.8rem 1.2rem;
+    border-radius: 18px;
+  }
+
+  .rule-box {
+    padding: 1rem 1rem;
+  }
+
+  .rule-body {
+    padding-left: 0;
+    margin-top: 0.3rem;
+  }
+
+  .join-btn {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+  }
+}
